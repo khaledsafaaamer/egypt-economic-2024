@@ -1,0 +1,10 @@
+title: "Egypt Economic Landscape 2024"
+description: "A comprehensive analysis of Egypt's economy in FY2023/24"
+theme: null
+plugins:
+  - jekyll-relative-links
+relative_links:
+  enabled: true
+  collections: true
+include:
+  - docs/

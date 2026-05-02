@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Egypt Economic Landscape 2024</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap');
+
+  :root {
+    --gold: #C9A84C;
+    --dark-gold: #A07830;
+    --egypt-red: #CE1126;
+    --egypt-black: #000000;
+    --deep-blue: #0A1628;
+    --mid-blue: #1a2e4a;
+    --light-blue: #2a4a7a;
+    --sand: #F5E6C8;
+    --sand-dark: #E8D5A0;
+    --text-light: #E8D5A0;
+    --text-muted: #9ab0cc;
+    --card-bg: rgba(255,255,255,0.05);
+    --card-border: rgba(201,168,76,0.3);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--deep-blue);
+    color: var(--text-light);
+    overflow-x: hidden;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #050d1a 0%, #0a1628 40%, #0d1f3c 70%, #1a0a05 100%);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/All_Gizah_Pyramids.jpg/1280px-All_Gizah_Pyramids.jpg') center/cover no-repeat;
+    opacity: 0.12;
+    filter: sepia(0.5);
+  }
+
+  .hero-grid {
+    position: absolute; inset: 0;
+    background-image: linear-gradient(rgba(201,168,76,0.05) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(201,168,76,0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+
+  .hero-content {
+    position: relative; z-index: 2;
+    max-width: 900px;
+    padding: 2rem;
+    animation: fadeInUp 1s ease;
+  }
+
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .flag-stripe {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    margin-bottom: 2rem;
+    border-radius: 4px;
+    overflow: hidden;
+    width: 120px;
+    height: 8px;
+    margin: 0 auto 2rem;
+  }
+  .stripe-red { flex: 1; background: #CE1126; }
+  .stripe-white { flex: 1; background: #ffffff; }
+  .stripe-black { flex: 1; background: #000000; }
+
+  .hero-eyebrow {
+    font-size: 0.8rem;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1rem;
+    opacity: 0.9;
+  }
+
+  .hero-title {
+    font-family: 'Cairo', sans-serif;
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    font-weight: 900;
+    line-height: 1.1;
+    background: linear-gradient(135deg, #F5E6C8, var(--gold), #fff8e8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+  }
+
+  .hero-tagline {
+    font-size: 1rem;
+    font-style: italic;
+    color: var(--gold);
+    opacity: 0.8;
+    margin-bottom: 3rem;
+  }
+
+  .hero-badges {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem;
+    margin-bottom: 3rem;
+  }
+
+  .badge {
+    padding: 0.4rem 1rem;
+    border-radius: 100px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    border: 1px solid;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .badge:hover { transform: translateY(-2px); box-shadow: 0 4px 20px rgba(0,0,0,0.4); }
+  .badge-green  { background: rgba(34,197,94,0.15);  border-color: rgba(34,197,94,0.4);  color: #86efac; }
+  .badge-red    { background: rgba(239,68,68,0.15);  border-color: rgba(239,68,68,0.4);  color: #fca5a5; }
+  .badge-yellow { background: rgba(234,179,8,0.15);  border-color: rgba(234,179,8,0.4);  color: #fde68a; }
+  .badge-blue   { background: rgba(59,130,246,0.15); border-color: rgba(59,130,246,0.4); color: #93c5fd; }
+  .badge-purple { background: rgba(168,85,247,0.15); border-color: rgba(168,85,247,0.4); color: #d8b4fe; }
+
+  .hero-scroll {
+    display: inline-block;
+    padding: 0.9rem 2.5rem;
+    background: linear-gradient(135deg, var(--gold), var(--dark-gold));
+    color: #1a1000;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border-radius: 100px;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 24px rgba(201,168,76,0.4);
+  }
+  .hero-scroll:hover { transform: translateY(-3px); box-shadow: 0 8px 32px rgba(201,168,76,0.5); }
+
+  /* ── KPI STRIP ── */
+  .kpi-strip {
+    background: linear-gradient(90deg, var(--mid-blue), var(--light-blue), var(--mid-blue));
+    border-top: 1px solid var(--card-border);
+    border-bottom: 1px solid var(--card-border);
+    padding: 2rem 1rem;
+  }
+
+  .kpi-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+  }
+
+  .kpi-item {
+    text-align: center;
+    padding: 1.5rem 1rem;
+    border-radius: 12px;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    transition: transform 0.25s, border-color 0.25s;
+    cursor: default;
+  }
+  .kpi-item:hover { transform: translateY(-4px); border-color: var(--gold); }
+
+  .kpi-value {
+    font-family: 'Cairo', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 900;
+    line-height: 1;
+    margin-bottom: 0.25rem;
+  }
+  .kpi-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-bottom: 0.5rem; }
+  .kpi-note  { font-size: 0.75rem; color: var(--text-muted); line-height: 1.4; }
+
+  .kpi-green  { color: #4ade80; }
+  .kpi-red    { color: #f87171; }
+  .kpi-yellow { color: #fbbf24; }
+  .kpi-blue   { color: #60a5fa; }
+  .kpi-gold   { color: var(--gold); }
+
+  /* ── SECTIONS ── */
+  .section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5rem 2rem;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .section-tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    border: 1px solid rgba(201,168,76,0.4);
+    padding: 0.3rem 1rem;
+    border-radius: 100px;
+    margin-bottom: 1rem;
+  }
+
+  .section-title {
+    font-family: 'Cairo', sans-serif;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 700;
+    color: var(--sand);
+    margin-bottom: 0.75rem;
+  }
+
+  .section-desc {
+    color: var(--text-muted);
+    font-size: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+
+  /* ── CHART BARS ── */
+  .chart-section { background: rgba(10,22,40,0.7); }
+
+  .bar-chart {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    padding: 2rem;
+  }
+
+  .bar-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .bar-label {
+    width: 160px;
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    text-align: right;
+    flex-shrink: 0;
+  }
+
+  .bar-track {
+    flex: 1;
+    height: 32px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .bar-fill {
+    height: 100%;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    padding-right: 0.75rem;
+    justify-content: flex-end;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #fff;
+    transition: width 1.5s cubic-bezier(.17,.67,.4,1.1);
+  }
+
+  .bar-services  { background: linear-gradient(90deg, #2563eb, #60a5fa); width: 52%; }
+  .bar-industry  { background: linear-gradient(90deg, #7c3aed, #a78bfa); width: 32%; }
+  .bar-agri      { background: linear-gradient(90deg, #059669, #34d399); width: 16%; }
+  .bar-tourism   { background: linear-gradient(90deg, var(--dark-gold), var(--gold)); width: 62%; }
+  .bar-suez      { background: linear-gradient(90deg, #0369a1, #38bdf8); width: 43%; }
+  .bar-remit     { background: linear-gradient(90deg, #7c3aed, #c084fc); width: 100%; }
+  .bar-gas       { background: linear-gradient(90deg, #065f46, #34d399); width: 40%; }
+
+  /* ── TIMELINE ── */
+  .timeline {
+    position: relative;
+    padding-left: 2rem;
+  }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, var(--gold), transparent);
+  }
+  .tl-item {
+    position: relative;
+    padding: 0 0 2.5rem 2rem;
+  }
+  .tl-dot {
+    position: absolute;
+    left: -0.5rem; top: 0.3rem;
+    width: 1rem; height: 1rem;
+    border-radius: 50%;
+    border: 2px solid var(--gold);
+    background: var(--deep-blue);
+  }
+  .tl-dot.active { background: var(--gold); }
+  .tl-year {
+    font-size: 0.75rem;
+    color: var(--gold);
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.25rem;
+  }
+  .tl-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--sand);
+    margin-bottom: 0.4rem;
+  }
+  .tl-body { font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; }
+
+  /* ── CARDS GRID ── */
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    padding: 1.75rem;
+    transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
+  }
+  .card:hover {
+    transform: translateY(-6px);
+    border-color: var(--gold);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.4);
+  }
+
+  .card-icon { font-size: 2rem; margin-bottom: 0.75rem; }
+  .card-title { font-size: 1rem; font-weight: 700; color: var(--sand); margin-bottom: 0.5rem; }
+  .card-value { font-family: 'Cairo', sans-serif; font-size: 1.8rem; font-weight: 900; color: var(--gold); margin-bottom: 0.5rem; }
+  .card-desc  { font-size: 0.82rem; color: var(--text-muted); line-height: 1.6; }
+
+  /* ── REFORM PILLS ── */
+  .reforms-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+  }
+  .reform-pill {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.25rem;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    transition: border-color 0.2s;
+  }
+  .reform-pill:hover { border-color: var(--gold); }
+  .reform-num {
+    width: 36px; height: 36px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, var(--gold), var(--dark-gold));
+    color: #1a1000;
+    font-weight: 900;
+    font-size: 1rem;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .reform-title { font-size: 0.9rem; font-weight: 600; color: var(--sand); margin-bottom: 0.25rem; }
+  .reform-desc  { font-size: 0.78rem; color: var(--text-muted); line-height: 1.5; }
+
+  /* ── COMPARISON TABLE ── */
+  .comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--card-bg);
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--card-border);
+  }
+  .comparison-table th {
+    padding: 1rem 1.25rem;
+    background: rgba(201,168,76,0.15);
+    color: var(--gold);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-align: left;
+  }
+  .comparison-table td {
+    padding: 0.9rem 1.25rem;
+    font-size: 0.88rem;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    color: var(--text-light);
+  }
+  .comparison-table tr:last-child td { border-bottom: none; }
+  .comparison-table tr.highlight td { background: rgba(201,168,76,0.08); }
+  .comparison-table tr:hover td { background: rgba(255,255,255,0.03); }
+  .flag-cell { display: flex; align-items: center; gap: 0.5rem; }
+
+  /* ── PHOTO GALLERY ── */
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  @media (max-width: 768px) { .gallery-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 480px) { .gallery-grid { grid-template-columns: 1fr; } }
+
+  .gallery-item {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--card-border);
+    position: relative;
+    cursor: pointer;
+  }
+  .gallery-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s;
+  }
+  .gallery-item:hover img { transform: scale(1.07); }
+  .gallery-caption {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    padding: 0.75rem;
+    background: linear-gradient(transparent, rgba(0,0,0,0.85));
+    font-size: 0.78rem;
+    color: #fff;
+    transform: translateY(100%);
+    transition: transform 0.3s;
+  }
+  .gallery-item:hover .gallery-caption { transform: translateY(0); }
+
+  /* ── PROJECTIONS ── */
+  .projections-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+  }
+  .proj-card {
+    text-align: center;
+    padding: 2rem 1.5rem;
+    border-radius: 16px;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    transition: transform 0.2s;
+  }
+  .proj-card:hover { transform: translateY(-4px); }
+  .proj-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--text-muted); margin-bottom: 0.75rem; }
+  .proj-current { font-size: 1rem; color: var(--text-muted); margin-bottom: 0.25rem; }
+  .proj-value   { font-family: 'Cairo', sans-serif; font-size: 2.4rem; font-weight: 900; color: var(--gold); line-height: 1; margin-bottom: 0.25rem; }
+  .proj-year    { font-size: 0.75rem; color: var(--gold); opacity: 0.7; }
+
+  /* ── PROGRESS BARS ── */
+  .progress-item { margin-bottom: 1.5rem; }
+  .progress-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem; }
+  .progress-title { font-size: 0.85rem; color: var(--sand); }
+  .progress-pct   { font-size: 0.85rem; font-weight: 700; color: var(--gold); }
+  .progress-track { height: 10px; background: rgba(255,255,255,0.07); border-radius: 100px; overflow: hidden; }
+  .progress-fill  { height: 100%; border-radius: 100px; transition: width 1.5s ease; }
+  .fill-gold   { background: linear-gradient(90deg, var(--dark-gold), var(--gold)); }
+  .fill-blue   { background: linear-gradient(90deg, #1d4ed8, #60a5fa); }
+  .fill-red    { background: linear-gradient(90deg, #991b1b, #f87171); }
+  .fill-green  { background: linear-gradient(90deg, #065f46, #34d399); }
+  .fill-purple { background: linear-gradient(90deg, #4c1d95, #a78bfa); }
+
+  /* ── FOOTER ── */
+  .site-footer {
+    background: rgba(5,10,20,0.9);
+    border-top: 1px solid var(--card-border);
+    text-align: center;
+    padding: 3rem 2rem;
+    color: var(--text-muted);
+    font-size: 0.82rem;
+  }
+  .footer-brand {
+    font-family: 'Cairo', sans-serif;
+    font-size: 1.3rem;
+    color: var(--gold);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  /* ── DIVIDER ── */
+  .divider {
+    border: none;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--card-border), transparent);
+    margin: 0;
+  }
+
+  /* ── NAV ── */
+  .topnav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(5,13,26,0.9);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--card-border);
+    padding: 0.75rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav-brand {
+    font-family: 'Cairo', sans-serif;
+    font-weight: 700;
+    color: var(--gold);
+    font-size: 0.95rem;
+    text-decoration: none;
+  }
+  .nav-links { display: flex; gap: 0; }
+  .nav-link {
+    padding: 0.4rem 0.9rem;
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    border-radius: 6px;
+    transition: color 0.2s, background 0.2s;
+  }
+  .nav-link:hover { color: var(--gold); background: rgba(201,168,76,0.1); }
+  @media (max-width: 600px) { .nav-links { display: none; } }
+
+  .pt-nav { padding-top: 60px; }
+
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+  @media (max-width: 768px) { .two-col { grid-template-columns: 1fr; } }
+
+  .img-card {
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--card-border);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+  }
+  .img-card img { width: 100%; display: block; }
+  .img-card-caption { padding: 0.75rem 1rem; background: rgba(255,255,255,0.04); font-size: 0.78rem; color: var(--text-muted); }
+
+  /* scroll reveal */
+  .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .revealed { opacity: 1; transform: none; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="topnav">
+  <a href="#" class="nav-brand">🇪🇬 Egypt Economy 2024</a>
+  <div class="nav-links">
+    <a href="#indicators" class="nav-link">Indicators</a>
+    <a href="#gdp" class="nav-link">GDP</a>
+    <a href="#revenue" class="nav-link">Revenue</a>
+    <a href="#reforms" class="nav-link">Reforms</a>
+    <a href="#regional" class="nav-link">Regional</a>
+    <a href="#gallery" class="nav-link">Gallery</a>
+    <a href="#outlook" class="nav-link">Outlook</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero pt-nav">
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="flag-stripe"><div class="stripe-red"></div><div class="stripe-white"></div><div class="stripe-black"></div></div>
+    <p class="hero-eyebrow" style="margin-top:1.5rem">Arab Republic of Egypt &nbsp;·&nbsp; Economic Overview</p>
+    <h1 class="hero-title">Egypt's Economic<br/>Landscape 2024</h1>
+    <p class="hero-subtitle">A Comprehensive Analysis of Fiscal Year 2023/24</p>
+    <p class="hero-tagline">"Resilience Through Reform"</p>
+    <div class="hero-badges">
+      <span class="badge badge-green">📈 GDP +3.8%</span>
+      <span class="badge badge-red">🔥 Inflation 33.4%</span>
+      <span class="badge badge-yellow">👷 Unemployment 7.1%</span>
+      <span class="badge badge-blue">🏦 Reserves $35.2B</span>
+      <span class="badge badge-purple">💼 IMF EFF $3B</span>
+      <span class="badge badge-green">🌍 FDI $10.9B</span>
+    </div>
+    <a href="#indicators" class="hero-scroll">Explore the Data ↓</a>
+  </div>
+</section>
+
+<!-- KPI STRIP -->
+<div class="kpi-strip">
+  <div class="kpi-grid">
+    <div class="kpi-item reveal">
+      <div class="kpi-value kpi-green">3.8%</div>
+      <div class="kpi-label">GDP Growth</div>
+      <div class="kpi-note">FY2023-24 · Above MENA avg</div>
+    </div>
+    <div class="kpi-item reveal">
+      <div class="kpi-value kpi-red">33.4%</div>
+      <div class="kpi-label">Inflation</div>
+      <div class="kpi-note">Annual avg · peaked 38%</div>
+    </div>
+    <div class="kpi-item reveal">
+      <div class="kpi-value kpi-yellow">7.1%</div>
+      <div class="kpi-label">Unemployment</div>
+      <div class="kpi-note">Down from 11.9% in 2017</div>
+    </div>
+    <div class="kpi-item reveal">
+      <div class="kpi-value kpi-blue">$35.2B</div>
+      <div class="kpi-label">FX Reserves</div>
+      <div class="kpi-note">CBE · end-2024</div>
+    </div>
+    <div class="kpi-item reveal">
+      <div class="kpi-value kpi-gold">92%</div>
+      <div class="kpi-label">Debt / GDP</div>
+      <div class="kpi-note">Significant fiscal constraint</div>
+    </div>
+    <div class="kpi-item reveal">
+      <div class="kpi-value kpi-green">$10.9B</div>
+      <div class="kpi-label">FDI Inflows</div>
+      <div class="kpi-note">Top destination in N.Africa</div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider"/>
+
+<!-- INDICATORS -->
+<section id="indicators" class="section">
+  <div class="section-header reveal">
+    <span class="section-tag">Overview</span>
+    <h2 class="section-title">Key Economic Indicators</h2>
+    <p class="section-desc">Egypt's economy in 2024 presents a complex picture: positive growth despite unprecedented inflationary pressures and a significant currency devaluation.</p>
+  </div>
+
+  <div class="two-col">
+    <div class="reveal">
+      <h3 style="color:var(--sand);margin-bottom:1.5rem;font-size:1.1rem">Economic Performance Metrics</h3>
+      <div class="progress-item">
+        <div class="progress-header"><span class="progress-title">GDP Growth Rate</span><span class="progress-pct">3.8%</span></div>
+        <div class="progress-track"><div class="progress-fill fill-green" style="width:38%"></div></div>
+      </div>
+      <div class="progress-item">
+        <div class="progress-header"><span class="progress-title">Inflation Rate (Annual)</span><span class="progress-pct">33.4%</span></div>
+        <div class="progress-track"><div class="progress-fill fill-red" style="width:67%"></div></div>
+      </div>
+      <div class="progress-item">
+        <div class="progress-header"><span class="progress-title">Food Inflation</span><span class="progress-pct">71.4%</span></div>
+        <div class="progress-track"><div class="progress-fill fill-red" style="width:71%"></div></div>
+      </div>
+      <div class="progress-item">
+        <div class="progress-header"><span class="progress-title">Unemployment</span><span class="progress-pct">7.1%</span></div>
+        <div class="progress-track"><div class="progress-fill fill-gold" style="width:22%"></div></div>
+      </div>
+      <div class="progress-item">
+        <div class="progress-header"><span class="progress-title">Youth Unemployment</span><span class="progress-pct">~19%</span></div>
+        <div class="progress-track"><div class="progress-fill fill-gold" style="width:38%"></div></div>
+      </div>
+      <div class="progress-item">
+        <div class="progress-header"><span class="progress-title">Poverty Rate</span><span class="progress-pct">29.7%</span></div>
+        <div class="progress-track"><div class="progress-fill fill-purple" style="width:30%"></div></div>
+      </div>
+      <div class="progress-item">
+        <div class="progress-header"><span class="progress-title">Debt-to-GDP</span><span class="progress-pct">92%</span></div>
+        <div class="progress-track"><div class="progress-fill fill-blue" style="width:92%"></div></div>
+      </div>
+    </div>
+    <div class="reveal">
+      <div class="img-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Khan_el-Khalili_market%2C_Cairo%2C_Egypt.jpg/800px-Khan_el-Khalili_market%2C_Cairo%2C_Egypt.jpg" alt="Cairo Market"/>
+        <div class="img-card-caption">🕌 Cairo's markets reflect the inflation pressures faced by Egyptian households in 2024</div>
+      </div>
+      <div style="margin-top:1rem; padding:1.25rem; background:var(--card-bg); border:1px solid var(--card-border); border-radius:12px;">
+        <p style="font-size:0.82rem; color:var(--text-muted); line-height:1.7">
+          Egypt's 2024 economic story is one of <strong style="color:var(--sand)">structural reform under pressure</strong>. The March 2024 currency devaluation — moving the EGP from ~30 to ~50 per USD — was painful but essential to unlock IMF disbursements and restore FX market confidence. Combined with a $35B UAE investment deal, the foundations for stabilization were laid, even as households endured the highest inflation in decades.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider"/>
+
+<!-- GDP -->
+<section id="gdp" class="section chart-section" style="background:rgba(10,22,40,0.5);">
+  <div style="max-width:1200px;margin:0 auto;padding:5rem 2rem;">
+  <div class="section-header reveal">
+    <span class="section-tag">GDP Analysis</span>
+    <h2 class="section-title">Sectoral Composition & Growth</h2>
+    <p class="section-desc">Egypt's GDP of approximately $395B is diversified across services, industry, and agriculture — with services dominant at 52%.</p>
+  </div>
+
+  <div class="two-col">
+    <div class="bar-chart reveal">
+      <h3 style="color:var(--sand);margin-bottom:1.5rem;font-size:0.95rem;letter-spacing:0.05em;text-transform:uppercase">GDP by Sector</h3>
+      <div class="bar-row">
+        <div class="bar-label">Services</div>
+        <div class="bar-track"><div class="bar-fill bar-services">52%</div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">Industry</div>
+        <div class="bar-track"><div class="bar-fill bar-industry">32%</div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">Agriculture</div>
+        <div class="bar-track"><div class="bar-fill bar-agri">16%</div></div>
+      </div>
+      <div style="margin-top:1.5rem;font-size:0.78rem;color:var(--text-muted);line-height:1.7">
+        <strong style="color:var(--sand)">Services</strong>: Tourism, Suez Canal, Telecom, Finance, Real Estate<br/>
+        <strong style="color:var(--sand)">Industry</strong>: Petroleum, Textiles, Manufacturing, Construction<br/>
+        <strong style="color:var(--sand)">Agriculture</strong>: Cotton, Rice, Wheat, Sugarcane
+      </div>
+    </div>
+
+    <div class="reveal">
+      <div class="img-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Suez_Canal_on_NASA_World_Wind_Globe.jpg/800px-Suez_Canal_on_NASA_World_Wind_Globe.jpg" alt="Suez Canal"/>
+        <div class="img-card-caption">🚢 The Suez Canal contributes $9.4B annually — 12-13% of global trade transits this waterway</div>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+
+<hr class="divider"/>
+
+<!-- REVENUE SECTORS -->
+<section id="revenue" class="section">
+  <div class="section-header reveal">
+    <span class="section-tag">Revenue Pillars</span>
+    <h2 class="section-title">Key Revenue Sectors</h2>
+    <p class="section-desc">Four primary sources generate the foreign currency that underpins Egypt's external balance sheet.</p>
+  </div>
+
+  <div class="cards-grid">
+    <div class="card reveal">
+      <div class="card-icon">✈️</div>
+      <div class="card-title">Tourism</div>
+      <div class="card-value">$13.6B</div>
+      <div class="card-desc">14.9M visitors in 2023. Grand Egyptian Museum opened. Target: 30M visitors by 2028. Key markets: Germany, UK, Russia, GCC.</div>
+    </div>
+    <div class="card reveal">
+      <div class="card-icon">🚢</div>
+      <div class="card-title">Suez Canal</div>
+      <div class="card-value">$9.4B</div>
+      <div class="card-desc">~50-60 vessel transits daily. 12-13% of global trade. Note: 2024 revenues impacted by Houthi Red Sea disruptions.</div>
+    </div>
+    <div class="card reveal">
+      <div class="card-icon">👨‍👩‍👧</div>
+      <div class="card-title">Remittances</div>
+      <div class="card-value">$22B</div>
+      <div class="card-desc">Egyptian diaspora — largest single FX inflow. Primarily from Gulf states, USA, and Europe. Critical reserve buffer.</div>
+    </div>
+    <div class="card reveal">
+      <div class="card-icon">⛽</div>
+      <div class="card-title">Natural Gas</div>
+      <div class="card-value">$8.9B</div>
+      <div class="card-desc">Zohr field (world's largest Med gas discovery). Positioning Egypt as regional LNG export hub. ~600K bbl/day oil production.</div>
+    </div>
+  </div>
+
+  <div style="margin-top:2rem;" class="reveal">
+    <div class="bar-chart">
+      <h3 style="color:var(--sand);margin-bottom:1.5rem;font-size:0.95rem;text-transform:uppercase;letter-spacing:0.05em">Revenue Sector Comparison (USD Billions)</h3>
+      <div class="bar-row">
+        <div class="bar-label">Remittances</div>
+        <div class="bar-track"><div class="bar-fill bar-remit">$22B</div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">Tourism</div>
+        <div class="bar-track"><div class="bar-fill bar-tourism">$13.6B</div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">Suez Canal</div>
+        <div class="bar-track"><div class="bar-fill bar-suez">$9.4B</div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">Natural Gas</div>
+        <div class="bar-track"><div class="bar-fill bar-gas">$8.9B</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider"/>
+
+<!-- TIMELINE: CURRENCY -->
+<section style="background:rgba(10,22,40,0.5);">
+<div class="section" style="padding:5rem 2rem;">
+  <div class="section-header reveal">
+    <span class="section-tag">Currency Crisis</span>
+    <h2 class="section-title">EGP Devaluation Timeline</h2>
+    <p class="section-desc">The Egyptian Pound lost approximately 68% of its value between early 2022 and end-2024 — a painful but necessary adjustment.</p>
+  </div>
+
+  <div class="two-col">
+    <div class="timeline reveal">
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-year">EARLY 2022</div>
+        <div class="tl-title">15.7 EGP / USD</div>
+        <div class="tl-body">Relatively stable following 2016 IMF program. Russia-Ukraine war begins — global commodity shock incoming.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-year">MARCH 2022</div>
+        <div class="tl-title">18.5 EGP / USD</div>
+        <div class="tl-body">First devaluation triggered by war-related capital outflows and wheat import cost spike.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-year">OCTOBER 2022</div>
+        <div class="tl-title">22.5 EGP / USD</div>
+        <div class="tl-body">Second devaluation. Dollar shortage intensifies. Parallel market premium widens.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-year">JANUARY 2023</div>
+        <div class="tl-title">30.9 EGP / USD</div>
+        <div class="tl-body">Third devaluation. Inflation accelerates. IMF negotiations intensify.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot active"></div>
+        <div class="tl-year">MARCH 2024</div>
+        <div class="tl-title">49.5 EGP / USD ← Current</div>
+        <div class="tl-body">Largest single devaluation. EGP allowed to float more freely. IMF unlocks $820M tranche. Parallel market collapses as official rate corrects.</div>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <div style="padding:2rem;background:var(--card-bg);border:1px solid var(--card-border);border-radius:16px;margin-bottom:1rem;">
+        <h4 style="color:var(--gold);margin-bottom:1rem;font-size:0.9rem;letter-spacing:0.1em;text-transform:uppercase">Devaluation Impact Summary</h4>
+        <div style="display:grid;gap:0.75rem;">
+          <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid rgba(255,255,255,0.07);">
+            <span style="font-size:0.83rem;color:var(--text-muted)">2022 Rate</span>
+            <span style="font-weight:700;color:#60a5fa">15.7 EGP</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid rgba(255,255,255,0.07);">
+            <span style="font-size:0.83rem;color:var(--text-muted)">2024 Rate</span>
+            <span style="font-weight:700;color:#f87171">49.5 EGP</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid rgba(255,255,255,0.07);">
+            <span style="font-size:0.83rem;color:var(--text-muted)">Total Depreciation</span>
+            <span style="font-weight:700;color:#f87171">-68%</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;padding:0.5rem 0;">
+            <span style="font-size:0.83rem;color:var(--text-muted)">FX Reserves (recovered)</span>
+            <span style="font-weight:700;color:#4ade80">$35.2B</span>
+          </div>
+        </div>
+      </div>
+      <div class="img-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Central_Bank_of_Egypt.jpg/800px-Central_Bank_of_Egypt.jpg" alt="Central Bank of Egypt" onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Cairo_in_Egypt.jpg/800px-Cairo_in_Egypt.jpg'"/>
+        <div class="img-card-caption">🏦 Central Bank of Egypt raised rates to 27% to combat inflation and stabilize the EGP</div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<hr class="divider"/>
+
+<!-- REFORMS -->
+<section id="reforms" class="section">
+  <div class="section-header reveal">
+    <span class="section-tag">Policy Actions</span>
+    <h2 class="section-title">Key Reforms 2024</h2>
+    <p class="section-desc">Egypt's reform program is multi-dimensional — combining monetary tightening, fiscal consolidation, structural reforms, and digital transformation.</p>
+  </div>
+
+  <div class="reforms-grid">
+    <div class="reform-pill reveal">
+      <div class="reform-num">1</div>
+      <div>
+        <div class="reform-title">Monetary Tightening</div>
+        <div class="reform-desc">CBE raised benchmark rates to <strong style="color:var(--gold)">27%</strong> — one of the world's highest. Aims to anchor inflation expectations and defend EGP.</div>
+      </div>
+    </div>
+    <div class="reform-pill reveal">
+      <div class="reform-num">2</div>
+      <div>
+        <div class="reform-title">SOE Privatization</div>
+        <div class="reform-desc"><strong style="color:var(--gold)">35+ state-owned companies</strong> listed for sale. Targets $5-7B in proceeds. Military-affiliated firms partially included.</div>
+      </div>
+    </div>
+    <div class="reform-pill reveal">
+      <div class="reform-num">3</div>
+      <div>
+        <div class="reform-title">Subsidy Reform</div>
+        <div class="reform-desc">Fuel and electricity subsidies cut by <strong style="color:var(--gold)">$2B/year</strong>. Expanded Takaful/Karama social programs offset impact on poor.</div>
+      </div>
+    </div>
+    <div class="reform-pill reveal">
+      <div class="reform-num">4</div>
+      <div>
+        <div class="reform-title">Exchange Rate Liberalization</div>
+        <div class="reform-desc">March 2024 EGP float eliminated the parallel market premium (~70+ EGP/USD black market). Restored FX market confidence.</div>
+      </div>
+    </div>
+    <div class="reform-pill reveal">
+      <div class="reform-num">5</div>
+      <div>
+        <div class="reform-title">Digital Economy</div>
+        <div class="reform-desc">Digital payments grew <strong style="color:var(--gold)">15%</strong>. 100+ licensed fintechs. E-invoicing mandate. ~70% of gov't services now digital.</div>
+      </div>
+    </div>
+    <div class="reform-pill reveal">
+      <div class="reform-num">6</div>
+      <div>
+        <div class="reform-title">Tax Reform</div>
+        <div class="reform-desc">Broadened tax base, improved collection efficiency. Total government revenue reached <strong style="color:var(--gold)">£1.5 Trillion</strong> in FY2023-24, +15% YoY.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider"/>
+
+<!-- REGIONAL COMPARISON -->
+<section id="regional" style="background:rgba(10,22,40,0.5);">
+<div class="section" style="padding:5rem 2rem;">
+  <div class="section-header reveal">
+    <span class="section-tag">Benchmarking</span>
+    <h2 class="section-title">Egypt vs Regional Peers</h2>
+    <p class="section-desc">Egypt's 3.8% GDP growth outperforms the MENA average of 2.1%, though its inflation challenge is unique among the region's major economies.</p>
+  </div>
+
+  <div class="reveal">
+  <table class="comparison-table">
+    <thead>
+      <tr>
+        <th>Country</th>
+        <th>GDP Growth</th>
+        <th>Inflation</th>
+        <th>Unemployment</th>
+        <th>FX Reserves</th>
+        <th>Key Strength</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="highlight">
+        <td><div class="flag-cell">🇪🇬 <strong>Egypt</strong></div></td>
+        <td><strong style="color:#4ade80">3.8%</strong></td>
+        <td><strong style="color:#f87171">33.4%</strong></td>
+        <td>7.1%</td>
+        <td>$35.2B</td>
+        <td>Suez Canal, Tourism, Scale</td>
+      </tr>
+      <tr>
+        <td><div class="flag-cell">🌍 MENA Average</div></td>
+        <td>2.1%</td>
+        <td>~8%</td>
+        <td>~11%</td>
+        <td>Varies</td>
+        <td>—</td>
+      </tr>
+      <tr>
+        <td><div class="flag-cell">🇸🇦 Saudi Arabia</div></td>
+        <td>1.7%</td>
+        <td>1.8%</td>
+        <td>3.5%</td>
+        <td>$450B+</td>
+        <td>Oil wealth, Vision 2030</td>
+      </tr>
+      <tr>
+        <td><div class="flag-cell">🇦🇪 UAE</div></td>
+        <td>3.4%</td>
+        <td>3.1%</td>
+        <td>2.2%</td>
+        <td>$200B+</td>
+        <td>Trade hub, Finance</td>
+      </tr>
+      <tr>
+        <td><div class="flag-cell">🇲🇦 Morocco</div></td>
+        <td>3.4%</td>
+        <td>5.9%</td>
+        <td>12.9%</td>
+        <td>$36B</td>
+        <td>Phosphates, Tourism</td>
+      </tr>
+      <tr>
+        <td><div class="flag-cell">🇹🇳 Tunisia</div></td>
+        <td>0.4%</td>
+        <td>8.3%</td>
+        <td>16.4%</td>
+        <td>$8B</td>
+        <td>Manufacturing, Proximity to EU</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div style="margin-top:2rem;display:grid;grid-template-columns:1fr 1fr;gap:1rem;" class="reveal">
+    <div style="padding:1.5rem;background:var(--card-bg);border:1px solid var(--card-border);border-radius:12px;">
+      <div style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--gold);margin-bottom:0.75rem">Egypt GDP Growth vs MENA</div>
+      <div style="font-family:'Cairo',sans-serif;font-size:3rem;font-weight:900;color:#4ade80;line-height:1">3.8%</div>
+      <div style="font-size:0.8rem;color:var(--text-muted);margin-top:0.25rem">vs MENA average 2.1% — outperforming by +1.7pp</div>
+    </div>
+    <div style="padding:1.5rem;background:var(--card-bg);border:1px solid var(--card-border);border-radius:12px;">
+      <div style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--gold);margin-bottom:0.75rem">North Africa FDI Share</div>
+      <div style="font-family:'Cairo',sans-serif;font-size:3rem;font-weight:900;color:var(--gold);line-height:1">35%</div>
+      <div style="font-size:0.8rem;color:var(--text-muted);margin-top:0.25rem">of North African investment flows go to Egypt</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<hr class="divider"/>
+
+<!-- GALLERY -->
+<section id="gallery" class="section">
+  <div class="section-header reveal">
+    <span class="section-tag">Visual Gallery</span>
+    <h2 class="section-title">Egypt: Economic Landmarks</h2>
+    <p class="section-desc">The physical and cultural assets underpinning Egypt's economic story — from ancient wonders to modern infrastructure.</p>
+  </div>
+
+  <div class="gallery-grid reveal">
+    <div class="gallery-item">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/All_Gizah_Pyramids.jpg/800px-All_Gizah_Pyramids.jpg" alt="Pyramids of Giza"/>
+      <div class="gallery-caption">🏛️ Pyramids of Giza — UNESCO World Heritage, core tourism asset</div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Suez_Canal_on_NASA_World_Wind_Globe.jpg/800px-Suez_Canal_on_NASA_World_Wind_Globe.jpg" alt="Suez Canal"/>
+      <div class="gallery-caption">🚢 Suez Canal — $9.4B in annual revenues, strategic global chokepoint</div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Cairo_in_Egypt.jpg/800px-Cairo_in_Egypt.jpg" alt="Cairo"/>
+      <div class="gallery-caption">🌆 Cairo — Africa's largest city, home to 22M in greater metro area</div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/800px-PNG_transparency_demonstration_1.png" alt="Red Sea" onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Empire_State_Building_%28aerial_view%29.jpg/800px-Empire_State_Building_%28aerial_view%29.jpg'"/>
+      <div class="gallery-caption">🏖️ Red Sea Riviera — Hurghada & Sharm El-Sheikh drive tourism revenue</div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Khan_el-Khalili_market%2C_Cairo%2C_Egypt.jpg/800px-Khan_el-Khalili_market%2C_Cairo%2C_Egypt.jpg" alt="Khan El-Khalili"/>
+      <div class="gallery-caption">🕌 Khan El-Khalili — historic bazaar symbolising Egypt's commerce heritage</div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Aswan_High_Dam_%28EG%29%2C_from_the_other_side.jpg/800px-Aswan_High_Dam_%28EG%29%2C_from_the_other_side.jpg" alt="Aswan High Dam" onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Cairo_in_Egypt.jpg/800px-Cairo_in_Egypt.jpg'"/>
+      <div class="gallery-caption">⚡ Aswan High Dam — hydropower backbone; Egypt targeting 42% renewables by 2035</div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider"/>
+
+<!-- INVESTMENTS -->
+<section style="background:rgba(10,22,40,0.5);">
+<div class="section" style="padding:5rem 2rem;">
+  <div class="section-header reveal">
+    <span class="section-tag">Landmark Deals</span>
+    <h2 class="section-title">Major Investments 2024</h2>
+    <p class="section-desc">Two deals defined Egypt's investment landscape in 2024 — one from the IMF, one from the UAE — together injecting over $38B.</p>
+  </div>
+
+  <div class="two-col">
+    <div class="card reveal" style="border-color:rgba(201,168,76,0.5)">
+      <div class="card-icon">🏗️</div>
+      <div class="card-title">Ras El-Hekma Deal</div>
+      <div class="card-value">$35B</div>
+      <div class="card-desc" style="line-height:1.8">
+        Signed February 2024 with Abu Dhabi's ADQ — the <strong style="color:var(--sand)">largest FDI deal in African history</strong>.<br/><br/>
+        • 170 km² coastal development<br/>
+        • $15B upfront (immediate reserve boost)<br/>
+        • Premium resorts, residential, logistics<br/>
+        • ~500,000 projected jobs
+      </div>
+    </div>
+
+    <div class="card reveal" style="border-color:rgba(139,92,246,0.5)">
+      <div class="card-icon">💼</div>
+      <div class="card-title">IMF Extended Fund Facility</div>
+      <div class="card-value">$3B</div>
+      <div class="card-desc" style="line-height:1.8">
+        46-month programme approved December 2022, extended/augmented 2024.<br/><br/>
+        • Conditioned on FX flexibility<br/>
+        • Subsidy reform benchmarks<br/>
+        • Privatization milestones<br/>
+        • Unlocks additional multilateral financing
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top:2rem;padding:1.5rem 2rem;background:var(--card-bg);border:1px solid var(--card-border);border-radius:16px;" class="reveal">
+    <div style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.15em;color:var(--gold);margin-bottom:1rem">Additional Investment Pipeline</div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;">
+      <div><div style="font-size:1.5rem;font-weight:900;font-family:'Cairo',sans-serif;color:#4ade80">$10B</div><div style="font-size:0.78rem;color:var(--text-muted)">Renewable Energy investments</div></div>
+      <div><div style="font-size:1.5rem;font-weight:900;font-family:'Cairo',sans-serif;color:#60a5fa">$58B</div><div style="font-size:0.78rem;color:var(--text-muted)">New Administrative Capital total plan</div></div>
+      <div><div style="font-size:1.5rem;font-weight:900;font-family:'Cairo',sans-serif;color:var(--gold)">$3.5B</div><div style="font-size:0.78rem;color:var(--text-muted)">Saudi-UAE bilateral investments</div></div>
+      <div><div style="font-size:1.5rem;font-weight:900;font-family:'Cairo',sans-serif;color:#f472b6">$500M</div><div style="font-size:0.78rem;color:var(--text-muted)">World Bank social protection loan</div></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<hr class="divider"/>
+
+<!-- OUTLOOK / PROJECTIONS -->
+<section id="outlook" class="section">
+  <div class="section-header reveal">
+    <span class="section-tag">2025–2026 Projections</span>
+    <h2 class="section-title">Future Economic Outlook</h2>
+    <p class="section-desc">IMF projections paint a cautiously optimistic picture — provided reform momentum is maintained and regional stability holds.</p>
+  </div>
+
+  <div class="projections-row reveal">
+    <div class="proj-card">
+      <div class="proj-label">GDP Growth</div>
+      <div class="proj-current" style="font-size:0.85rem;color:#9ca3af">2024: 3.8%</div>
+      <div class="proj-value">4.2%</div>
+      <div class="proj-year">IMF Projection FY2025</div>
+    </div>
+    <div class="proj-card">
+      <div class="proj-label">Inflation Target</div>
+      <div class="proj-current" style="font-size:0.85rem;color:#9ca3af">2024: 33.4%</div>
+      <div class="proj-value">15%</div>
+      <div class="proj-year">CBE Target end-2025</div>
+    </div>
+    <div class="proj-card">
+      <div class="proj-label">Tourism Target</div>
+      <div class="proj-current" style="font-size:0.85rem;color:#9ca3af">2023: 14.9M visitors</div>
+      <div class="proj-value">30M</div>
+      <div class="proj-year">Ministry Target 2028</div>
+    </div>
+    <div class="proj-card">
+      <div class="proj-label">Clean Energy</div>
+      <div class="proj-current" style="font-size:0.85rem;color:#9ca3af">Current: ~20%</div>
+      <div class="proj-value">42%</div>
+      <div class="proj-year">Renewable Target 2035</div>
+    </div>
+  </div>
+
+  <div style="margin-top:3rem;display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;" class="reveal">
+    <div style="padding:1.75rem;background:rgba(34,197,94,0.07);border:1px solid rgba(34,197,94,0.25);border-radius:16px;">
+      <h4 style="color:#4ade80;margin-bottom:1rem;font-size:0.95rem">🟢 Opportunities Ahead</h4>
+      <ul style="list-style:none;display:grid;gap:0.6rem;">
+        <li style="font-size:0.82rem;color:var(--text-muted);padding-left:1rem;position:relative"><span style="position:absolute;left:0">→</span> Tourism targeting 30M visitors by 2028</li>
+        <li style="font-size:0.82rem;color:var(--text-muted);padding-left:1rem;position:relative"><span style="position:absolute;left:0">→</span> $10B renewable energy investment pipeline</li>
+        <li style="font-size:0.82rem;color:var(--text-muted);padding-left:1rem;position:relative"><span style="position:absolute;left:0">→</span> Ras El-Hekma: 500K jobs, $35B development</li>
+        <li style="font-size:0.82rem;color:var(--text-muted);padding-left:1rem;position:relative"><span style="position:absolute;left:0">→</span> Demographic dividend: 60%+ under age 30</li>
+        <li style="font-size:0.82rem;color:var(--text-muted);padding-left:1rem;position:relative"><span style="position:absolute;left:0">→</span> Gulf strategic partnerships deepening</li>
+        <li style="font-size:0.82rem;color:var(--text-muted);padding-left:1rem;position:relative"><span style="position:absolute;left:0">→</span> Africa's fastest-growing fintech ecosystem</li>
+      </ul>
+    </div>
+    <div style="padding:1.75rem;background:rgba(239,68,68,0.07);border:1px solid rgba(239,68,68,0.25);border-radius:16px;">
+      <h4 style="color:#f87171;margin-bottom:1rem;font-size:0.95rem">🔴 Key Challenges</h4>
+      <ul style="list-style:none;display:grid;gap:0.6rem;">
+        <li style="font-size:0.82rem;color:var(--text-muted);padding-left:1rem;position:relative"><span style="position:absolute;left:0">→</span> Inflation peaked at 38%; eroding real wages</li>
+        <li style="font-size:0.82rem;color:var(--text-muted);padding-left:1rem;position:relative"><span style="position:absolute;left:0">→</span> $165B external debt burden</li>
+        <li style="font-size:0.82rem;color:var(--text-muted);padding-left:1rem;position:relative"><span style="position:absolute;left:0">→</span> Red Sea crisis cutting canal revenues</li>
+        <li style="font-size:0.82rem;color:var(--text-muted);padding-left:1rem;position:relative"><span style="position:absolute;left:0">→</span> Youth unemployment at ~19%</li>
+        <li style="font-size:0.82rem;color:var(--text-muted);padding-left:1rem;position:relative"><span style="position:absolute;left:0">→</span> 29.7% below poverty line</li>
+        <li style="font-size:0.82rem;color:var(--text-muted);padding-left:1rem;position:relative"><span style="position:absolute;left:0">→</span> Regional instability (Gaza, Sudan, Libya)</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<hr class="divider"/>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-brand">🇪🇬 Egypt Economic Landscape 2024</div>
+  <p style="margin-bottom:0.5rem">Compiled from IMF, World Bank, CBE, CAPMAS, and Ministry of Finance sources</p>
+  <p style="margin-bottom:1.5rem;color:rgba(154,176,204,0.6);font-size:0.75rem">Data reflects FY2023-24 fiscal year. Projections sourced from IMF Article IV and World Economic Outlook.</p>
+  <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;">
+    <a href="https://www.imf.org/en/countries/EGY" target="_blank" style="color:var(--gold);font-size:0.78rem;text-decoration:none">IMF Egypt</a>
+    <span style="color:rgba(255,255,255,0.2)">·</span>
+    <a href="https://www.cbe.org.eg" target="_blank" style="color:var(--gold);font-size:0.78rem;text-decoration:none">Central Bank of Egypt</a>
+    <span style="color:rgba(255,255,255,0.2)">·</span>
+    <a href="https://www.worldbank.org/en/country/egypt" target="_blank" style="color:var(--gold);font-size:0.78rem;text-decoration:none">World Bank</a>
+    <span style="color:rgba(255,255,255,0.2)">·</span>
+    <a href="https://www.capmas.gov.eg" target="_blank" style="color:var(--gold);font-size:0.78rem;text-decoration:none">CAPMAS</a>
+  </div>
+</footer>
+
+<script>
+  // Scroll reveal
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('revealed'); } });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const t = document.querySelector(a.getAttribute('href'));
+      if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    });
+  });
+</script>
+</body>
+</html>
